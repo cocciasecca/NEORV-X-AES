@@ -55,6 +55,10 @@ git submodule update --init --recursive --depth 1
 cd ..
 fi
 
+# adding NEORV-X-AES files
+cp -af neorv32-setups_post/. neorv32-setups/
+rm -rf neorv32-setups_post
+
 if [[ -f riscv32-gnu-toolchain.tar.gz ]]
 then
 if [[ ! -d /opt/riscv ]]
